@@ -8,7 +8,19 @@
 
 html {
   // Defines 1rem
-  font-size: 62.5%;
+  font-size: 62.5%; //10px
+
+  @include responsive(tablet-landscape) {
+    font-size: 56.25%; //9px
+  }
+
+  @include responsive(tablet-portrait) {
+    font-size: 50%; //8px
+  }
+
+  @include responsive(lg-desktop) {
+    font-size: 75%; //12pz
+  }
 }
 
 body {
