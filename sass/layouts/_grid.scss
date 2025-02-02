@@ -2,8 +2,17 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include responsive(tablet-portrait) {
+    max-width: $grid-width-md;
+    padding: 0 3rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include responsive(tablet-portrait) {
+      margin-bottom: $gutter-vertical-sm;
+    }
   }
 
   @include clearfix;
@@ -13,6 +22,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include responsive(tablet-portrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-sm;
+      }
+    }
+
+    @include responsive(tablet-portrait) {
+      width: 100% !important;
     }
   }
 
