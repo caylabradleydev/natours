@@ -85,7 +85,6 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 /* ***************************** */
@@ -113,7 +112,7 @@ body {
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
-  letter-spacing: 1.74rem;
+  letter-spacing: 1.75rem;
   font-weight: 700;
   animation: moveInRight 1s ease-out;
 }
@@ -132,7 +131,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   transition: all 0.2s;
 }
 @media (max-width: 56.25em) {
@@ -190,9 +189,19 @@ body {
 .utility-margin-bottom-md {
   margin-bottom: 4rem !important;
 }
+@media (max-width: 56.25em) {
+  .utility-margin-bottom-md {
+    margin-bottom: 3rem !important;
+  }
+}
 
 .utility-margin-bottom-lg {
   margin-bottom: 8rem !important;
+}
+@media (max-width: 56.25em) {
+  .utility-margin-bottom-lg {
+    margin-bottom: 5rem !important;
+  }
 }
 
 .btn, .btn:link, .btn:visited {
@@ -281,17 +290,45 @@ body {
   transition: all 0.2s;
   outline-offset: 2rem;
 }
+@media (max-width: 56.25em) {
+  .composition__photo {
+    float: left;
+    position: relative;
+    width: 33.333333%;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  }
+}
 .composition__photo--p1 {
   left: 0;
   top: -2rem;
+}
+@media (max-width: 56.25em) {
+  .composition__photo--p1 {
+    top: 0;
+    transform: scale(1.2);
+  }
 }
 .composition__photo--p2 {
   right: 0;
   top: 2rem;
 }
+@media (max-width: 56.25em) {
+  .composition__photo--p2 {
+    top: -1rem;
+    transform: scale(1.3);
+    z-index: 100;
+  }
+}
 .composition__photo--p3 {
   left: 20%;
   top: 10rem;
+}
+@media (max-width: 56.25em) {
+  .composition__photo--p3 {
+    top: 1rem;
+    left: 0;
+    transform: scale(1.1);
+  }
 }
 .composition__photo:hover {
   outline: 1.5rem solid #55c57a;
@@ -312,6 +349,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
 }
+@media (max-width: 56.25em) {
+  .feature-box {
+    padding: 2rem;
+  }
+}
 .feature-box__icon {
   font-size: 6rem;
   margin-bottom: 0.5rem;
@@ -320,6 +362,11 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+@media (max-width: 56.25em) {
+  .feature-box__icon {
+    margin: 0;
+  }
 }
 .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.03);
@@ -371,6 +418,8 @@ body {
   border-top-right-radius: 3px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .card__picture--1 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../assets/img/nat-5.jpg);
@@ -442,6 +491,44 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 100;
+}
+@media (max-width: 56.25em) {
+  .card {
+    height: auto;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+  .card__side {
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+  .card__side--back {
+    transform: rotateY(0);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0);
+  }
+  .card__details {
+    padding: 1rem 3rem;
+  }
+  .card__cta {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    transform: translate(0);
+    padding: 7rem 4rem 4rem 4rem;
+  }
+  .card__price-box {
+    margin-bottom: 3rem;
+  }
+  .card__price-value {
+    font-size: 4rem;
+  }
 }
 
 .story {
@@ -702,8 +789,8 @@ body {
 }
 @media (max-width: 37.5em) {
   .navigation__button {
-    top: 3.5rem;
-    right: 3.5rem;
+    top: 3rem;
+    right: 3rem;
   }
 }
 .navigation__background {
@@ -820,7 +907,7 @@ body {
 }
 
 .header {
-  height: 95vh;
+  height: 85vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../assets/img/hero.jpg");
   background-size: cover;
   background-position: top;
@@ -854,6 +941,7 @@ body {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem;
+  color: #f7f7f7;
 }
 @media (max-width: 56.25em) {
   .footer {
@@ -907,9 +995,9 @@ body {
   transform: rotate(5deg) scale(1.3);
 }
 .footer__copyright {
-  color: #f7f7f7;
   border-top: 1px solid #777;
   padding-top: 2rem;
+  width: 80%;
   float: right;
 }
 @media (max-width: 56.25em) {
@@ -923,18 +1011,18 @@ body {
   max-width: 114rem;
   margin: 0 auto;
 }
-@media (max-width: 56.25em) {
-  .row {
-    max-width: 50rem;
-    padding: 0 3rem;
-  }
-}
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
 @media (max-width: 56.25em) {
   .row:not(:last-child) {
     margin-bottom: 6rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 }
 .row::after {
@@ -983,16 +1071,26 @@ body {
   padding: 25rem 0;
   margin-top: -20vh;
 }
+@media (max-width: 56.25em) {
+  .section-about {
+    padding: 20rem 0;
+  }
+}
 
 .section-features {
+  padding: 20rem 0;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../assets/img/nat-4.jpg");
   background-size: cover;
-  padding: 20rem 0;
-  margin-top: -10rem;
   transform: skewY(-7deg);
+  margin-top: -10rem;
 }
 .section-features > * {
   transform: skewY(7deg);
+}
+@media (max-width: 56.25em) {
+  .section-features {
+    padding: 10rem 0;
+  }
 }
 
 .section-tours {
@@ -1000,16 +1098,31 @@ body {
   padding: 25rem 0 15rem 0;
   margin-top: -10rem;
 }
+@media (max-width: 56.25em) {
+  .section-tours {
+    padding: 20rem 0 10rem 0;
+  }
+}
 
 .section-stories {
   padding: 15rem 0;
   background-color: transparent;
   position: relative;
 }
+@media (max-width: 56.25em) {
+  .section-stories {
+    padding: 10rem 0;
+  }
+}
 
 .section-booking {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+@media (max-width: 56.25em) {
+  .section-booking {
+    padding: 10rem 0;
+  }
 }
 
 .booking {

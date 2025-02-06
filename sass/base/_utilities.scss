@@ -26,8 +26,16 @@
 
 .utility-margin-bottom-md {
   margin-bottom: 4rem !important;
+
+  @include responsive(tablet-portrait) {
+    margin-bottom: 3rem !important;
+  }
 }
 
 .utility-margin-bottom-lg {
   margin-bottom: 8rem !important;
+
+  @include responsive(tablet-portrait) {
+    margin-bottom: 5rem !important;
+  }
 }
